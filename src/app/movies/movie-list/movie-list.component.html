@@ -1,0 +1,15 @@
+<nav-bar></nav-bar>
+<table class="table table-hover">
+    <tr>
+        <th>MOVIE NAME</th>
+        <th>GENRES</th>
+        <th>RATING</th>
+        <th>DELETE</th>
+    </tr>
+    <tr *ngFor="let movie of service.list">
+        <td (click)="populateForm(movie)">{{movie.movieName}}</td>
+        <td (click)="populateForm(movie)">{{movie.genres}}</td>
+        <td (click)="populateForm(movie)">{{movie.Rating}}</td>
+        <td><button (click)="onDelete(movie.movieId)" class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+</table>
